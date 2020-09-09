@@ -1,0 +1,42 @@
+DIM pares(14) AS INTEGER
+DIM impares(14) AS INTEGER
+DIM maximopar AS INTEGER
+DIM maximoimp AS INTEGER
+maximoimp = 0
+maximopar = 0
+PRINT "Ingrese 14 numeros"
+
+FOR I = 1 TO 14
+
+    INPUT num
+    IF num MOD 2 = 0 THEN
+        pares(I) = num
+        IF pares(I) > maximopar THEN
+            maximopar = pares(I)
+        END IF
+    END IF
+    IF num MOD 2 = 1 THEN
+        impares(I) = num
+        IF impares(I) > maximoimp THEN
+            maximoimp = impares(I)
+        END IF
+    END IF
+
+    PRINT "Ingreso"; I; "numeros"
+NEXT
+CLS
+PRINT "el maximo par es "; maximopar
+PRINT "el maximo impar es"; maximoimp
+PRINT "los numeros impares son"
+FOR Y = 1 TO 14
+    IF impares(Y) <> 0 THEN
+        PRINT impares(Y)
+    END IF
+NEXT
+
+PRINT "los numeros pares son"
+FOR X = 1 TO 14
+    IF pares(X) <> 0 THEN
+        PRINT pares(X)
+    END IF
+NEXT

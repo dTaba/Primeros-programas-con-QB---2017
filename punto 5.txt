@@ -1,0 +1,32 @@
+DIM numero AS LONG
+DIM posicion AS INTEGER
+DIM posmayor AS INTEGER
+DIM posmenor AS INTEGER
+DIM mayor AS INTEGER
+DIM menor AS INTEGER
+DO
+    INPUT "ingrese un numero"; numero
+    posicion = posicion + 1
+    IF posicion = 1 THEN
+        mayor = numero
+        menor = numero
+        posmayor = 1
+        posmenor = 1
+    ELSE
+        IF numero <> 0 THEN
+            IF numero > mayor THEN
+                mayor = numero
+                posmayor = posicion
+            END IF
+            IF numero < menor THEN
+                menor = numero
+                posmenor = posicion
+            END IF
+        END IF
+    END IF
+
+LOOP UNTIL numero = 0
+IF posicion > 1 THEN
+    PRINT "El numero mayor es"; mayor; "y su posicion es"; posmayor
+    PRINT "el numero menor es"; menor; "y su poscion es"; posmenor
+END IF

@@ -1,0 +1,35 @@
+DIM vec(10) AS INTEGER
+DIM vec2(10) AS INTEGER
+DIM aux, y, x AS INTEGER
+FOR i = 1 TO 10
+    CLS
+    PRINT "Ingrese 10 numeros"
+    INPUT vec(i)
+NEXT
+CLS
+PRINT "vec:"
+
+FOR i = 1 TO 10
+    PRINT vec(i)
+NEXT
+
+FOR i = 1 TO 10
+    vec2(i) = vec(i)
+NEXT
+
+FOR y = 1 TO 10
+    FOR x = 1 TO (10-y)
+        IF vec2(x) > vec2(x + 1) THEN
+            aux = vec2(x)
+            vec2(x) = vec2(x + 1)
+            vec2(x + 1) = aux
+        END IF
+    NEXT
+NEXT
+
+PRINT "ORDENA2"
+
+FOR i = 1 TO 10
+    SLEEP 1
+    PRINT vec2(i)
+NEXT

@@ -1,0 +1,11 @@
+DIM Horas AS INTEGER
+DIM Minutos AS INTEGER
+DIM Segundos AS INTEGER
+FOR Horas = 23 TO 0 STEP -1
+    FOR Minutos = 59 TO 0 STEP -1
+        FOR Segundos = 59 TO 0 STEP -1
+            SLEEP 1
+            PRINT Horas; Minutos; Segundos
+        NEXT
+    NEXT
+NEXT

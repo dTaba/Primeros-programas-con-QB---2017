@@ -1,0 +1,23 @@
+realizar un programa que permita el ingreso de 18 numeros y :
+cuente cuantos fueron negativos , sume los positivos positivos pares mayores a 20, cuente cuantos estuvieron dentro del rango 100 150 , muestre todos los resultados
+
+DIM num AS SINGLE
+DIM tope AS INTEGER
+DIM positivos AS INTEGER
+DIM negativos AS INTEGER
+negativo = 0
+positivo = 0
+FOR i = 0 TO 17
+    INPUT "ingrese un numero", num
+    IF num MOD 2 = 0 THEN
+        IF num > 20 THEN positivo = positivo + num
+    END IF
+    IF num < 0 THEN negativo = negativo + 1
+    IF num > 100 AND num < 150 THEN tope = tope + 1
+NEXT
+PRINT "Procesando..."
+Sleep 3
+PRINT "la suma de los pares mayores a 20 es"; positivo
+PRINT "se ingresaron"; negativo; "numeros negativos"
+PRINT "se ingresaron"; tope; "numeros entre el 100 y 150"
+

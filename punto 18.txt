@@ -1,0 +1,25 @@
+DIM vec(15) AS INTEGER
+DIM suma AS INTEGER
+suma = 0
+mayor = -99999
+mayorimp = -99999
+FOR i = 1 TO 15
+    INPUT "ingrese 15 numeros"; vec(i)
+    suma = suma + vec(i)
+    IF vec(i) MOD 2 = 0 THEN
+        IF vec(i) > mayor THEN
+            mayor = vec(i)
+        END IF
+    END IF
+    IF vec(i) MOD 2 = 1 THEN
+        IF vec(i) > mayorimp THEN
+            mayorimp = vec(i)
+        END IF
+    END IF
+
+NEXT
+PRINT "el mayor valor par es"; mayor
+PRINT "el mayor valor impar es"; mayorimp
+FOR i = 1 TO 15
+    PRINT vec(i)
+NEXT

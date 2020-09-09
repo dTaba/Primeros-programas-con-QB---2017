@@ -1,0 +1,23 @@
+DIM temperatura AS INTEGER
+DIM max AS INTEGER
+DIM min AS INTEGER
+FOR i = 1 TO 10
+    INPUT "cual es la temperatura"; temperatura
+    IF i = 1 THEN
+        min = temperatura
+        max = temperatura
+    END IF
+
+    IF temperatura > max THEN
+        max = temperatura
+    ELSE
+        IF temperatura < min THEN
+            min = temperatura
+        END IF
+    END IF
+
+NEXT
+COLOR 4
+PRINT "la temperatura maxima es"; max
+COLOR 1
+PRINT "la temperatura minima es"; min

@@ -1,0 +1,27 @@
+DIM mat(4, 3) AS INTEGER
+FOR I = 1 TO 4
+    FOR X = 1 TO 3
+        PRINT "Ingrese numeros para las posiciones"; I; X; "del vector"
+        INPUT mat(I, X)
+
+    NEXT
+NEXT
+CLS
+PRINT "Calculanding..."
+SLEEP 1
+PRINT "Calculanding..."
+SLEEP 1
+PRINT "Calculanding..."
+SLEEP 1
+PRINT "Calculanding..."
+SLEEP 1
+
+
+
+PRINT "La matriz es obtenida es"
+FOR I = 1 TO 4
+    FOR X = 1 TO 3
+        PRINT mat(I, X)
+    NEXT
+NEXT
+

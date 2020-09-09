@@ -1,0 +1,28 @@
+DIM vec(10) AS INTEGER
+DIM aux AS INTEGER
+FOR i = 1 TO 10
+    CLS
+    INPUT "ingrese un numero"; vec(i)
+NEXT
+
+FOR i = 1 TO 10
+    PRINT vec(i)
+NEXT
+FOR X = 1 TO 10
+    FOR i = 1 TO 9
+        IF vec(i) > vec(i + 1) THEN
+            aux = vec(i)
+            vec(i) = vec(i + 1)
+            vec(i + 1) = aux
+        END IF
+    NEXT
+NEXT
+CLS
+PRINT "los numeros ordenados son"
+FOR i = 1 TO 10
+    PRINT vec(i)
+NEXT
+
+
+
+

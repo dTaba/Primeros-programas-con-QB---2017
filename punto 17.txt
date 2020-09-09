@@ -1,0 +1,32 @@
+DIM a(8) AS STRING
+DIM larg, voc, maxvoc, qv AS INTEGER
+PRINT "Ingrese 8 palabras"
+FOR i = 1 TO 8
+    INPUT a(i)
+NEXT
+larg = 1
+
+FOR i = 1 TO 8
+    IF LEN(a(i)) > LEN(a(larg)) THEN
+        larg = i
+    END IF
+
+    FOR j = 1 TO LEN(a(i))
+        IF LEFT$(a(i), j) = "a" OR LEFT$(a(i), j) = "e" OR LEFT$(a(i), j) = "i" OR LEFT$(a(i), j) = "o" OR LEFT$(a(i), j) = "u" THEN
+
+            voc = voc + 1
+        END IF
+
+    NEXT
+    IF i = 1 THEN
+        maxvoc = voc
+        qv = i
+    ELSE IF voc > maxvoc THEN
+            maxvoc = voc
+            qv = i
+        END IF
+    END IF
+NEXT
+
+PRINT "La palabra mas larga es: "; a(larg)
+PRINT "La palabra con mas vocales es: "; a(qv)

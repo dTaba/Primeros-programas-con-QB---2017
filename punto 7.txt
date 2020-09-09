@@ -1,0 +1,44 @@
+DIM fp AS STRING
+DIM Tablets AS INTEGER
+DIM Precio AS INTEGER
+DIM Cliente AS STRING
+DIM Efectivo AS STRING
+DIM Credito AS STRING
+DIM Debito AS STRING
+DIM DescuentoUnitario AS INTEGER
+DIM DescuentoPago AS INTEGER
+DIM Contador AS INTEGER
+DIM Tad AS INTEGER
+DIM Td AS INTEGER
+DIM T AS INTEGER
+Precio = 1000
+INPUT "Ingrese nombre del cliente "; Cliente
+PRINT "Su nombre es "; Cliente
+INPUT "Cuantas tablets desea comprar?"; Tablets
+PRINT "Total antes del descuento"; Tablets * Precio
+Tad = Tablets * Precio
+IF Tablets = 2 THEN
+    DescuentoUnitario = 10 * 1000 / 100
+END IF
+IF Tablets = 3 THEN
+    DescuentoUnitario = 15 * 1000 / 100
+END IF
+IF Tablets > 4 THEN
+    DescuentoUnitario = 20 * 1000 / 100
+END IF
+PRINT "DescuentoUnitario"; DescuentoUnitario
+INPUT "Desea pagar con debito,credito o efectivo?"; fp
+IF fp = "efectivo" THEN
+    DescuentoPago = 10 * DescuentoUnitario / 100
+END IF
+IF fp = "credito" THEN
+    DescuentoPago = 15 * DescuentoUnitario / 100
+END IF
+IF fp = "debito" THEN
+    DescuentoPago = 5 * DescuentoUnitario / 100
+END IF
+PRINT "Su descuento por pagar con "; fp; "es "; DescuentoPago
+Td = DescuentoUnitario + DescuentoPago
+T = Tad - Td
+PRINT "El total de descuento es"; Td
+PRINT "El total a pagar es"; T

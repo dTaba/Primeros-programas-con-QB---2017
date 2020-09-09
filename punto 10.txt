@@ -1,0 +1,58 @@
+DIM ape AS STRING
+DIM ramal AS STRING
+DIM kmr AS INTEGER
+DIM interno AS INTEGER
+DIM recaudado AS LONG
+DIM lawea AS INTEGER
+DIM MaxApe AS STRING
+DIM Salida AS STRING
+DIM PromedioTotal AS INTEGER
+lawea = 10
+DO
+    DO
+        INPUT " A que ramal pertenece"; ramal
+    LOOP UNTIL ramal = "a" OR ramal = "b" OR ramal = "c"
+    CLS
+    INPUT "cuanto recorrio?"; kmr
+    CLS
+    INPUT "cuanto recaudo?"; recaudado
+    CLS
+    INPUT "cual es su interno?"; interno
+    CLS
+    INPUT "cual es su nombre"; ape
+    CLS
+
+    SELECT CASE ramal
+        CASE IS = "a"
+            kma = kma + kmr
+            reca = reca + recaudado
+        CASE IS = "b"
+            kmb = kmb + kmr
+            recb = recb + recaudado
+        CASE IS = "c"
+            kmc = kmc + kmr
+            recc = recc + recaudado
+    END SELECT
+    IF lawea = 10 THEN
+        MaxApe = ape
+        MaxInt = interno
+        MaxApeKmr = kmr
+        MaxRecaudacion = recaudado
+        Pepita = 9
+    ELSE
+        IF recaudado > MaxRecaudacion THEN
+            MaxApe = ape
+            MaxRecaudacion = recaudado
+            MaxInt = interno
+        END IF
+    END IF
+    Recatotal = reca + recb + recc
+    PromedioTotal = Recatotal / 3
+    PRINT "Los km acumulados en el ramal a fueron "; kma
+    PRINT "Los km acumulados en el ramal b fueron "; kmb
+    PRINT "Los km acumulados en el ramal c fueron "; kmc
+    PRINT "El promedio de la recaudacion total son"; PromedioTotal; " Pesos"
+    PRINT "El chofer que mas recaudo fue "; MaxApe
+    INPUT "Desea continuar?"; Salida
+    CLS
+LOOP UNTIL Salida = "No"

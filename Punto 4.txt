@@ -1,0 +1,20 @@
+CLS
+DIM numero AS LONG
+DIM suma AS LONG
+DIM promedio AS SINGLE
+DIM num_promedio AS SINGLE
+DO
+    INPUT "Ingrese un numero"; numero
+    suma = suma + numero
+    num_promedio = num_promedio + 1
+    promedio = suma / num_promedio
+    PRINT "la suma es"; suma
+    PRINT "el promedio es"; promedio
+Loop until numero =0
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+DIM Hora AS INTEGER
+DIM Minutos AS INTEGER
+DIM Segundos AS INTEGER
+FOR Hora = 0 TO 23
+    FOR Minutos = 0 TO 59
+        FOR Segundos = 0 TO 59
+            SLEEP 1
+            LOCATE 8, 10: PRINT "ษอออออออออออออป"
+            LOCATE 10, 12: PRINT ; Hora; Minutos; Segundos
+            LOCATE 12, 10: PRINT "ศอออออออออออออผ"
+            LOCATE 10, 10: PRINT "บ"
+            LOCATE 10, 24: PRINT "บ"
+
+
+
+
+        NEXT
+    NEXT
+NEXT

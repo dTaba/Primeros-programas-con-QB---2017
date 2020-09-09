@@ -1,0 +1,21 @@
+DIM precioc AS INTEGER
+DIM cantidad AS INTEGER
+DIM nombre AS STRING
+precioc = 100 + 100  21  100
+DO
+    INPUT cual es su nombre; nombre
+    INPUT cuantas camperas desea; cantidad
+    SELECT CASE cantidad
+        CASE 2 TO 4
+            d = 10
+        CASE 5 TO 7
+            d = 12
+        CASE 8 TO 12
+            d = 15
+        CASE 12 TO 20
+            d = 20
+        CASE IS = 21
+            d = 30
+    END SELECT
+    PRINT el total a abonar es; d  precioc
+LOOP UNTIL nombre = salir

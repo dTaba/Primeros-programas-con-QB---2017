@@ -1,0 +1,30 @@
+DIM numeros AS SINGLE
+DIM posisitivosC AS INTEGER
+DIM negativos AS INTEGER
+negativos = 0
+positivosC = 0
+DIM caca AS INTEGER
+DIM paresdemedias AS INTEGER
+caca = 0
+paresdemedias = 0
+
+DO
+    caca = caca + 1
+    INPUT "ingrese 11 numeros enteros"; numeros
+    PRINT "ingreso"; caca; "numero/s"
+
+    IF numeros > 50 THEN
+        positivosC = positivosC + numeros
+    END IF
+    IF numeros < 0 THEN
+        negativos = negativos + 1
+    END IF
+    IF numeros MOD 2 = 0 THEN
+        IF numeros > paresdemedias THEN
+            paresdemedias = numeros
+        END IF
+    END IF
+LOOP UNTIL caca = 11
+PRINT "la suma de los positivos mayores a 50 es"; positivosC
+PRINT "se ingresaron"; negativos; "numeros negativos"
+PRINT "el mayor par fue"; paresdemedias

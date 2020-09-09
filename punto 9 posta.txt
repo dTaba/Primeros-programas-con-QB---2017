@@ -1,0 +1,50 @@
+DIM comb AS STRING
+DIM precio AS INTEGER
+DIM cant AS INTEGER
+DIM maxlitro AS INTEGER
+DIM bariable AS STRING
+DIM mayordespacho AS STRING
+DO
+    DO
+        INPUT "Que combustible desea cargar?;gas(g);super(s);comun(c)"; comb
+    LOOP UNTIL comb = "g" OR comb = "c" OR comb = "s"
+    IF comb = "g" OR comb = "s" OR comb = "c" THEN
+    END IF
+    SELECT CASE comb
+        CASE IS = "g"
+            INPUT "cuantos litros desea cargar"; litros
+            litrosg = litrosg + litros
+            preciog = 10 * litros
+            recaudacionga = recaudacionga + preciog
+            IF maxlitro < litros THEN
+                maxlitro = litros
+                mayordespacho = "Gasoil"
+            END IF
+        CASE IS = "c"
+            INPUT "cuantos litros desea cargar"; litrosc
+            litrosca = litrosca + litrosc
+            precioc = 20 * litrosc
+            recaudacionco = recaudacionco + precioc
+            IF maxlitro < litrosc THEN
+                maxlitro = litrosc
+                mayordespacho = "comun"
+            END IF
+        CASE IS = "s"
+            INPUT "cuantos litros desea cargar"; litross
+            litrossu = litrosg + litross
+            preciosu = 30 * litross
+            recaudacionsu = recaudacionsu + preciosu
+            IF maxlitro < litross THEN
+                maxlitro = litross
+                mayordespacho = "super"
+            END IF
+
+    END SELECT
+    PRINT "el que mas despacho fue "; mayordespacho
+    PRINT "el mayor despacho fue de "; maxlitro; " litros"
+    PRINT "la recaudacion de super fue "; recaudacionsu
+    PRINT "la recaudacion de gasoil fue "; recaudacionga
+    PRINT "la recaudacion de comun fue "; recaudacionco
+    INPUT "desea continuar si(s)o no(n)?"; bariable
+    CLS
+LOOP UNTIL bariable = "n"

@@ -1,0 +1,16 @@
+DIM num AS INTEGER
+DIM impar AS INTEGER
+DIM promedio AS INTEGER
+DIM suma AS INTEGER
+num = 0
+DO
+    num = num + 1
+    INPUT "ingrese un numero impar"; impar
+    IF impar MOD 2 = 0 THEN
+        PRINT "el numero ingresado no es impar bobo"
+    ELSE
+        suma = suma + impar
+        promedio = suma / num
+    END IF
+LOOP UNTIL num = 6
+PRINT "el promedio es "; promedio
